@@ -2,12 +2,10 @@
 const express = require('express');
 const router = express.Router();
 const clienteController = require('../controllers/clienteController');
-const jwtMiddleware = require('../middlewares/jwtMiddleware');
-const cacheMiddleware = require('../middlewares/cacheMiddleware');
 
-router.get('/', jwtMiddleware, cacheMiddleware, clienteController.getAllClientes);
-router.post('/', jwtMiddleware, clienteController.createCliente);
-router.put('/:id', jwtMiddleware, clienteController.updateCliente);
-router.delete('/:id', jwtMiddleware, clienteController.deleteCliente);
+router.get('/', clienteController.getAllClientes);
+router.post('/', clienteController.addCliente);
+router.put('/:id', clienteController.updateCliente);
+router.delete('/:id', clienteController.deleteCliente);
 
 module.exports = router;

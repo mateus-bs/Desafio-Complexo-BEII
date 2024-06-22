@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Adicionar Usuário
+  form(action='/usuarios', method='POST')
+    label(for='usuario') Usuário:
+    input(type='text', name='usuario', id='usuario')
+    label(for='senha') Senha:
+    input(type='password', name='senha', id='senha')
+    label(for='token') Token:
+    input(type='text', name='token', id='token')
+    button(type='submit') Adicionar Usuário

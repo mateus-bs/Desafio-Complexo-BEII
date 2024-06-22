@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 Editar Usuário
+  form(action='/usuarios/:id', method='POST')
+    input(type='hidden', name='_method', value='PUT')
+    label(for='usuario') Usuário:
+    input(type='text', name='usuario', id='usuario', value=usuario.usuario)
+    label(for='senha') Senha:
+    input(type='password', name='senha', id='senha', value=usuario.senha)
+    label(for='token') Token:
+    input(type='text', name='token', id='token', value=usuario.token)
+    button(type='submit') Atualizar Usuário

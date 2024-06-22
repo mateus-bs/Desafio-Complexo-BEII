@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 Detalhes do Produto
+  p Nome: #{produto.nome}
+  p Descrição: #{produto.descricao}
+  p Preço: #{produto.preco}
+  p Data Atualizado: #{formatDate(produto.data_atualizado)}

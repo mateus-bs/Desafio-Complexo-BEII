@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Editar Produto
+  form(action='/produtos/:id', method='POST')
+    input(type='hidden', name='_method', value='PUT')
+    label(for='nome') Nome:
+    input(type='text', name='nome', id='nome', value=produto.nome)
+    label(for='descricao') Descrição:
+    input(type='text', name='descricao', id='descricao', value=produto.descricao)
+    label(for='preco') Preço:
+    input(type='number', name='preco', id='preco', step='0.01', value=produto.preco)
+    label(for='data_atualizado') Data Atualizado:
+    input(type='datetime-local', name='data_atualizado', id='data_atualizado', value=formatDate(produto.data_atualizado))
+    button(type='submit') Atualizar Produto

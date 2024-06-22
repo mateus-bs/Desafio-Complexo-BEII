@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1 Lista de Clientes
+  table
+    thead
+      tr
+        th ID
+        th Nome
+        th Sobrenome
+        th Email
+        th Idade
+    tbody
+      each cliente in clientes
+        tr
+          td= cliente.id
+          td= cliente.nome
+          td= cliente.sobrenome
+          td= cliente.email
+          td= cliente.idade

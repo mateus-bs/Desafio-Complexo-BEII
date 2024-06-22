@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Adicionar Produto
+  form(action='/produtos', method='POST')
+    label(for='nome') Nome:
+    input(type='text', name='nome', id='nome')
+    label(for='descricao') Descrição:
+    input(type='text', name='descricao', id='descricao')
+    label(for='preco') Preço:
+    input(type='number', name='preco', id='preco', step='0.01')
+    label(for='data_atualizado') Data Atualizado:
+    input(type='datetime-local', name='data_atualizado', id='data_atualizado')
+    button(type='submit') Adicionar Produto

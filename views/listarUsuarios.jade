@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 Lista de Usuários
+  table
+    thead
+      tr
+        th ID
+        th Usuário
+        th Token
+    tbody
+      each usuario in usuarios
+        tr
+          td= usuario.id
+          td= usuario.usuario
+          td= usuario.token

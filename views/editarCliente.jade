@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Editar Cliente
+  form(action='/clientes/:id', method='POST')
+    input(type='hidden', name='_method', value='PUT')
+    label(for='nome') Nome:
+    input(type='text', name='nome', id='nome', value=cliente.nome)
+    label(for='sobrenome') Sobrenome:
+    input(type='text', name='sobrenome', id='sobrenome', value=cliente.sobrenome)
+    label(for='email') Email:
+    input(type='email', name='email', id='email', value=cliente.email)
+    label(for='idade') Idade:
+    input(type='number', name='idade', id='idade', value=cliente.idade)
+    button(type='submit') Atualizar Cliente
